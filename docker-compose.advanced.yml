@@ -116,3 +116,4 @@ networks:
     driver: bridge
     external: false
     name: mysql-network
+    
