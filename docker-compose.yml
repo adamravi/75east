@@ -11,7 +11,7 @@ services:
     ports:
       - "443:443"
       - "80:80"
-      #- "8080:8080" # Don't want this port open (on all hostnames!)
+      - "8080:8080" # Don't want this port open (on all hostnames!)
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
@@ -28,7 +28,7 @@ services:
       - "--api"
       - "--metrics"
       - "--metrics.prometheus"
-      - "--entrypoints.websecure.http.middlewares=ratelimit@docker"
+      #- "--entrypoints.websecure.http.middlewares=ratelimit@docker"
       #- "--http.middlewares.ratelimit.ratelimit.average=100"
       #- "--http.middlewares.ratelimit.ratelimit.burst=50"
       - "--providers.docker.network=web"

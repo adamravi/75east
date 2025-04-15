@@ -11,7 +11,7 @@ services:
     ports:
       - "443:443"
       - "80:80"
-      #- "8080:8080" # Don't want this port open (on all hostnames!)
+      - "8080:8080" # Don't want this port open (on all hostnames!)
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
